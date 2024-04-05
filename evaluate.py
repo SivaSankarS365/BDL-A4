@@ -20,6 +20,7 @@ def get_files():
     return files
 
 def evaluate_file(file):
+    file = file.split('/')[-1]
     gt_base = 'outputs/prepare/'
     computed_base = 'outputs/process/'
     gt = pd.read_csv(f'{gt_base}{file}')

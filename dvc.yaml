@@ -1,0 +1,27 @@
+stages:
+  download:
+    cmd: python download.py
+    deps:
+    - params.yaml
+    outs:
+    - data
+  prepare_data:
+    cmd: python prepare.py
+    deps:
+    - params.yaml
+    outs:
+    - outputs/prepare
+  
+  process_data:
+    cmd: python process.py
+    deps:
+    - params.yaml
+    outs:
+    - outputs/process
+
+  evaluate_data:
+    cmd: python evaluate.py
+    deps:
+    - params.yaml
+    outs:
+    - outputs/scores.json
