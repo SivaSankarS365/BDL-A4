@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: b2a3694cc196de0ede352d5eb3bd5738
-      size: 280
+      md5: 32f6fcc2e474f8e87eb02666d6270fab
+      size: 268
     outs:
     - path: data
       hash: md5
@@ -18,36 +18,36 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: b2a3694cc196de0ede352d5eb3bd5738
-      size: 280
+      md5: 32f6fcc2e474f8e87eb02666d6270fab
+      size: 268
     outs:
     - path: outputs/prepare
       hash: md5
-      md5: c50924865b126e7393dbb15d12f19da2.dir
-      size: 941
-      nfiles: 5
+      md5: a0600f58257a7ff619aa84020ea90dd7.dir
+      size: 764
+      nfiles: 4
   process_data:
     cmd: python process.py
     deps:
     - path: params.yaml
       hash: md5
-      md5: b2a3694cc196de0ede352d5eb3bd5738
-      size: 280
+      md5: 32f6fcc2e474f8e87eb02666d6270fab
+      size: 268
     outs:
     - path: outputs/process
       hash: md5
-      md5: 0fc0dac0a3383f74685ed19d257c4284.dir
-      size: 2626
-      nfiles: 5
+      md5: 5ee0288fdf3f7f4edd0d4100b77b8f34.dir
+      size: 2107
+      nfiles: 4
   evaluate_data:
     cmd: python evaluate.py
     deps:
     - path: params.yaml
       hash: md5
-      md5: b2a3694cc196de0ede352d5eb3bd5738
-      size: 280
+      md5: 32f6fcc2e474f8e87eb02666d6270fab
+      size: 268
     outs:
     - path: outputs/scores.json
       hash: md5
-      md5: fbb5abc42f44b8f656d868b4457ce88e
-      size: 803
+      md5: ee88b38749aa103d6f4e66528dc33154
+      size: 642
